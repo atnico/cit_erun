@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Evenement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -16,7 +15,7 @@ class Environnement extends Model
         'nom'
     ];
 
-    public function evenement()
+    public function evenements()
     {
         return $this->hasMany(Evenement::class);
     }

@@ -2,11 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\User;
-use App\Models\Ville;
-use App\Models\Niveau;
-use App\Models\Inscription;
-use App\Models\Environnement;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -26,14 +21,14 @@ protected $fillable = [
     ];
 
 
-    public function users()
+    public function user()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class);
     }
 
-    public function niveau()
+    public function level()
     {
-        return $this->belongsTo(Niveau::class);
+        return $this->belongsTo(Level::class);
     }
 
     public function ville()
@@ -46,13 +41,14 @@ protected $fillable = [
         return $this->belongsTo(Environnement::class);
     }
 
-    public function niveaux()
+    public function inscriptions()
     {
-        return $this->belongsTo(Niveau::class);
+        return $this->belongsToMany(User::class, 'inscriptions')
+                ->withPivot('valide');
     }
 
-    public function inscription()
+    public function categorie()
     {
-        return $this->hasMany(Inscription::class);
+        return $this->belongsTo(Categorie::class);
     }
 }

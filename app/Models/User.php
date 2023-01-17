@@ -3,9 +3,6 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Niveau;
-use App\Models\Evenement;
-use App\Models\Inscription;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -15,7 +12,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
- 
+
     /**
      * The attributes that are mass assignable.
      *
@@ -47,19 +44,23 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
+
+
+
+    public function inscriptions()
+    {
+        return $this->belongsToMany(Evenement::class, 'inscriptions')
+            ->withPivot('valide');
+    }
+
     public function evenements()
     {
         return $this->hasMany(Evenement::class);
     }
 
-    public function niveaux()
+    public function role()
     {
-        return $this->belongsTo(Niveau::class);
+        return $this->belongsTo(Role::class);
     }
-
-    public function inscription()
-    {
-        return $this->hasMany(Inscription::class);
-    }
-
 }
