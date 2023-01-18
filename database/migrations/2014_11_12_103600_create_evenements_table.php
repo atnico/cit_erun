@@ -20,11 +20,11 @@ return new class extends Migration
     {
         Schema::create('evenements', function (Blueprint $table) {
             $table->id();
-            $table->string('image', 25);
-            $table->string('nom', 50);
+            $table->string('image', 50);
+            $table->string('pseudo', 50);
             $table->text('description', 500);
             $table->string('nb_participants');
-            $table->boolean('valide')->default(false);            
+            $table->boolean('valide')->default(false); 
             $table->timestamps();
 
             $table->foreignIdFor(Level::class)->constrained();

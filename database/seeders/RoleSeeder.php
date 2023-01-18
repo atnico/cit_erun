@@ -2,13 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Level;
-use App\Models\Evenement;
+use App\Models\Role;
 use Illuminate\Database\Seeder;
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class EvenementSeeder extends Seeder
+class RoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,6 +15,16 @@ class EvenementSeeder extends Seeder
      */
     public function run()
     {
-        Evenement::factory(5)->create();
+        Role::create([
+            'nom' => 'user'
+            
+        ]);
+
+        Role::create([
+            'nom' => 'admin'
+            
+        ]);
+
+        
     }
 }
