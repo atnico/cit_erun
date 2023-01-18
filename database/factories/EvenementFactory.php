@@ -24,7 +24,7 @@ class EvenementFactory extends Factory
     {
         return [
 
-            'pseudo' => $this->faker->firstName(),
+            'nom' => $this->faker->firstName(),
             'image' => 'https://via.placeholder.com/150',
             'description' => $this->faker->sentences(5,true),
             'nb_participants' => $this->faker->randomDigit,

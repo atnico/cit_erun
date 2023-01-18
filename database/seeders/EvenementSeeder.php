@@ -17,6 +17,8 @@ class EvenementSeeder extends Seeder
      */
     public function run()
     {
-        Evenement::factory(5)->create();
+        Evenement::factory(5)->create([
+            'nom' => 'nom'
+        ]);
     }
 }
