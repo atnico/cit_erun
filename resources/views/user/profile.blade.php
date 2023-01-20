@@ -19,9 +19,9 @@
                         id="email">
                 </div>
                 <div class="form-group">
-                    <label for="prenom">Email</label>
-                    <input required type="text" class="form-control" name="email" value="{{ $user->email }}"
-                        id="email">
+                    <label for="adresse">Adresse</label>
+                    <input required type="text" class="form-control" name="adresse" value="{{ $user->adresse }}"
+                        id="adresse">
                 </div>
             </form>
         </div>

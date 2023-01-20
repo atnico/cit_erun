@@ -24,6 +24,45 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <label for="streetName" class="col-md-4 col-form-label text-md-end">{{ __('Addresse') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="streetName" type="text" class="form-control @error('streetName') is-invalid @enderror" name="streetName" value="{{ old('streetName') }}" required autocomplete="streetName">
+
+                                @error('streetName')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="postcode" class="col-md-4 col-form-label text-md-end">{{ __('Code postal') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="postcode" type="int" class="form-control @error('postcode') is-invalid @enderror" name="postcode" value="{{ old('postcode') }}" required autocomplete="postcode">
+
+                                @error('postcode')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('Ville') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="city" type="string" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city">
+
+                                @error("city")
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
