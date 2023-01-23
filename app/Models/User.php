@@ -20,9 +20,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'pseudo',
-        'streetName',
-        'postcode',
-        'city',
+        'rue',
+        'code_postal',
+        'ville',
         'email',
         'password',
 

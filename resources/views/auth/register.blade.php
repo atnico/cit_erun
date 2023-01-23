@@ -25,12 +25,12 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="streetName" class="col-md-4 col-form-label text-md-end">{{ __('Addresse') }}</label>
+                            <label for="rue" class="col-md-4 col-form-label text-md-end">{{ __('Rue') }}</label>
 
                             <div class="col-md-6">
-                                <input id="streetName" type="text" class="form-control @error('streetName') is-invalid @enderror" name="streetName" value="{{ old('streetName') }}" required autocomplete="streetName">
+                                <input id="rue" type="text" class="form-control @error('rue') is-invalid @enderror" name="rue" value="{{ old('rue') }}" required autocomplete="rue">
 
-                                @error('streetName')
+                                @error('rue')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -38,12 +38,12 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="postcode" class="col-md-4 col-form-label text-md-end">{{ __('Code postal') }}</label>
+                            <label for="code_postal" class="col-md-4 col-form-label text-md-end">{{ __('Code postal') }}</label>
 
                             <div class="col-md-6">
-                                <input id="postcode" type="int" class="form-control @error('postcode') is-invalid @enderror" name="postcode" value="{{ old('postcode') }}" required autocomplete="postcode">
+                                <input id="code_postal" type="int" class="form-control @error('code_postal') is-invalid @enderror" name="code_postal" value="{{ old('code_postal') }}" required autocomplete="code_postal">
 
-                                @error('postcode')
+                                @error('code_postal')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -51,12 +51,12 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="city" class="col-md-4 col-form-label text-md-end">{{ __('Ville') }}</label>
+                            <label for="ville" class="col-md-4 col-form-label text-md-end">{{ __('Ville') }}</label>
 
                             <div class="col-md-6">
-                                <input id="city" type="string" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city">
+                                <input id="ville" type="string" class="form-control @error('ville') is-invalid @enderror" name="ville" value="{{ old('ville') }}" required autocomplete="ville">
 
-                                @error("city")
+                                @error("ville")
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

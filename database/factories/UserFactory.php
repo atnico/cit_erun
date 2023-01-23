@@ -20,9 +20,9 @@ class UserFactory extends Factory
         return [
 
             'pseudo' => $this->faker->firstName() . $this->faker->departmentNumber(),
-            'streetName' => $this->faker->streetName(),
-            'postcode' => $this->faker->postcode(),
-            'city' => $this->faker->city(),
+            'rue' => $this->faker->streetName(),
+            'code_postal' => $this->faker->postcode(),
+            'ville' => $this->faker->city(),
             'email' => $this->faker->unique()->safeEmail(),
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
